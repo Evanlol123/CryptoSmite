@@ -13,7 +13,6 @@ fi
 if [ "$#" -ne 3 ]
 then
     echo "Usage: <rma shim path>"
-    echo "If you need the last two files, please read the readme"
     exit 0;
 fi
 bb() {
