@@ -12,7 +12,7 @@ then
 fi
 if [ "$#" -ne 3 ]
 then
-    echo "Usage: <rma shim path> <cryptsetup.tar.xz path> <stateful.tar.xz>"
+    echo "Usage: <rma shim path>"
     echo "If you need the last two files, please read the readme"
     exit 0;
 fi
@@ -29,8 +29,8 @@ sleep 3
 
 echo "Modifying shim now this script will take a while..."
 SHIMPATH=$1
-STATEFULPATH=$3
-CRYPTSETUP_PATH=$2
+STATEFULPATH="./stateful2.tar.xz"
+CRYPTSETUP_PATH="./st.tar.xz"
 MAKEUSRLOCAL=1
 
 if grep "usrlocal" ${SHIMPATH}; then
